@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './App.css';
+import DateTimePicker from './components/DateTimePicker/DateTimePicker';
 
 class App extends Component {
   render() {
@@ -11,6 +12,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <br/>
+        <span>DatePicker</span>
+        <DateTimePicker onChange={() => {}}/>
       </div>
     );
   }

@@ -1,0 +1,125 @@
+@import '../../styles/_variables.scss';
+
+/**
+  Base input styles
+*/
+.input {
+  display: block;
+  background: none;
+  padding: .125rem .125rem .0625rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  width: 100%;
+  transition: all .28s ease;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid $colour-input-border;
+  appearance: textfield;
+
+  &:focus ~ .label, &:valid ~ .label {
+    top: -20px;
+    font-size: 12px;
+    color: $colour-light-blue;
+  }
+
+  &:focus ~ .bar:before, &:focus ~ .bar:after {
+    width: 50%;
+  }
+
+  &:focus:invalid ~ .hint {
+    opacity: 1;
+  }
+
+  &:valid ~ .hint {
+    opacity: 0;
+  }
+}
+
+.label {
+  color: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: .25rem;
+  pointer-events: none;
+  z-index: 1;
+  font-size: .8rem;
+  font-weight: normal;
+  transition: all 0.28s ease;
+
+  & + .group {
+    margin: 30px 0 0;
+  }
+}
+
+.group {
+  position: relative;
+  line-height: 24px;
+  width: 100%;
+  padding: 0 0 10px;
+}
+
+.hint {
+  position: absolute;
+  opacity: 0;
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 450ms cubic-bezier(.23, 1, .32, 1) 0ms;
+  top: .25rem;
+  padding-left: .125rem;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &:before, &:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: $colour-light-blue;
+    transition: 0.2s ease all;
+  }
+
+  &:before {
+    left: 50%;
+  }
+
+  &:after {
+    right: 50%;
+  }
+}
+
+.errorText,
+.successText {
+  position: absolute;
+  margin-top: 5px;
+  left: 1px;
+  font-size: 12px;
+  line-height: 12px;
+  color: $colour-input-warning-alert;
+  transition: all 450ms cubic-bezier(.23, 1, .32, 1) 0ms;
+}
+
+.successText {
+  color: $colour-deep-yellow-green;
+}
+
+.invalid {
+  .input, .input:focus {
+    border-color: $colour-input-warning-alert;
+  }
+
+  .input:focus ~ .label {
+    color: $colour-input-warning-alert;
+  }
+
+  .bar:before, .bar:after {
+    background: $colour-input-warning-alert;
+  }
+}

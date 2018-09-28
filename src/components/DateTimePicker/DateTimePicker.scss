@@ -1,0 +1,34 @@
+@import '../../styles/_variables.scss';
+
+.pickerWrapper {
+  width: 200px;
+  margin: auto;
+}
+
+.datepicker-input {
+  background-color: $colour-white;
+  border: none;
+  height: 40px;
+  padding: 10px;
+}
+
+.calendarPresets {
+  background: $colour-white;
+  position: absolute;
+  left: -200px;
+  top: 0;
+  width: 200px;
+
+  .presetItem {
+    height: 20px;
+  }
+}
+
+.flatpickr-months {
+  background: $colour-mid-blue;
+
+  .flatpickr-prev-month, .flatpickr-next-month {
+    position: relative;
+  }
+}
+
