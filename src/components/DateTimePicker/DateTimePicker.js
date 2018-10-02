@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { render as reactDomRender } from 'react-dom';
+// import { render as reactDomRender } from 'react-dom';
 import PropTypes from 'prop-types';
 import Flatpickr from 'flatpickr';
 
-import DatePresets from './DatePresets';
+// import DatePresets from './DatePresets';
 
 import 'flatpickr/dist/themes/material_blue.css';
 import './DateTimePicker.css';

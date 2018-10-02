@@ -34,6 +34,7 @@ const stylesDefaultLayout = theme => ({
   drawerPaper: {
     position: 'relative',
     whiteSpace: 'nowrap',
+    overflowX: 'hidden',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,

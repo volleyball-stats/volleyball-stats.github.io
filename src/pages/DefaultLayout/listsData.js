@@ -2,39 +2,29 @@ import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import StarIcon from '@material-ui/icons/Star';
-import SendIcon from '@material-ui/icons/Send';
-import MailIcon from '@material-ui/icons/Mail';
-import DeleteIcon from '@material-ui/icons/Delete';
-import ReportIcon from '@material-ui/icons/Report';
+import Add from '@material-ui/icons/Add';
+import History from '@material-ui/icons/History';
+import BarChart from '@material-ui/icons/BarChart';
 
 export const submenuItems = (
   <div>
     <ListItem button>
       <ListItemIcon>
-        <InboxIcon />
+        <Add/>
       </ListItemIcon>
-      <ListItemText primary="Inbox" />
+      <ListItemText primary="Add Event"/>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <StarIcon />
+        <History/>
       </ListItemIcon>
-      <ListItemText primary="Starred" />
+      <ListItemText primary="History"/>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <SendIcon />
+        <BarChart/>
       </ListItemIcon>
-      <ListItemText primary="Send mail" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <DraftsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Drafts" />
+      <ListItemText primary="Stats"/>
     </ListItem>
   </div>
 );
