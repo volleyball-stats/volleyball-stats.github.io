@@ -1,26 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-####Node Version >= 8.12.0
+#### Node Version >= 8.12.0
 
-######YARN
+###### YARN
 ```
 yarn
 yarn start
 ```
 
-######NPM
+###### NPM
 ```
 npm install
 npm start
 ```
 
-####Add new dependency
+#### Add new dependency
 ```
 yarn add <dependency-name>
 npm install <dependency-name> --save
 ```
 
-####Used libraries
+#### Used libraries
 [Material-UI](https://material-ui.com/)  
 [flatpicker](https://flatpickr.js.org/)  
 [moment.js](https://momentjs.com/)  
