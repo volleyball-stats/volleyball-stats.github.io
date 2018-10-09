@@ -10,13 +10,6 @@
       .rowHead {
         height: 30px;
         background: $colour-white;
-        border: none;
-      }
-
-      .tableRow {
-        &:nth-child(2n + 1) {
-          background: $colour-silver;
-        }
       }
 
       .tableCell,
@@ -76,5 +69,12 @@
 
   .paginationSelect {
     margin-left: 0;
+  }
+}
+
+.table-with-filter {
+  .filter-wrapper {
+    text-align: right;
+    margin-bottom: 10px;
   }
 }

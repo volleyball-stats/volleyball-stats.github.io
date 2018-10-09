@@ -46,7 +46,8 @@ class DataTable extends Component {
       root: '',
       tableCell: 'tableCell',
       tableCellHead: 'tableCellHead'
-    }
+    },
+    onRowClick: () => {}
   };
 
   constructor(props) {

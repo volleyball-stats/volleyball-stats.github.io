@@ -2,21 +2,20 @@ import React, { PureComponent } from 'react';
 import moment from 'moment';
 import Card from '@material-ui/core/Card/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Grid from '@material-ui/core/Grid/Grid';
-import TextField from '@material-ui/core/TextField/TextField';
 
-import DataTable from 'components/DataTable/DataTable';
 import DateTimePicker from 'components/DateTimePicker/DateTimePicker';
 import { getMonthDateRange } from 'utils/helpers';
 import tableData from './tableData';
 
 import './CustomDataTable.css';
+import FilterDataTable from '../../components/DataTable/FilterDataTable';
 
 class CustomDataTable extends PureComponent {
   constructor(props) {
     super(props);
 
     this.defaultOrderBy = 'date';
+    this.searchBy = 'name';
 
     this.cols = [
       { id: 'id', label: 'ID' },
@@ -66,31 +65,19 @@ class CustomDataTable extends PureComponent {
     return (
       <Card elevation={1} raised className="cardStyle">
         <CardContent>
-          <Grid container alignItems={'flex-end'} className="table-filters">
-            <Grid item xs={12} sm={6} className="text-left">
-              <TextField
-                label="Search field"
-                type="search"
-                margin="none"
-                variant="standard"
-                onChange={() => {}}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} className="text-right">
-              <DateTimePicker
-                mode={'range'}
-                presets={this.getDatePickerPresets()}
-                onChange={this.onDatesChange}
-                defaultDate={[startDate.toDate(), endDate.toDate()]}
-              />
-            </Grid>
-          </Grid>
+          <DateTimePicker
+            mode={'range'}
+            presets={this.getDatePickerPresets()}
+            onChange={this.onDatesChange}
+            defaultDate={[startDate.toDate(), endDate.toDate()]}
+          />
 
-          <DataTable
+          <FilterDataTable
             cols={this.cols}
             getRows={this.getTableRows}
             sourceData={tableData}
             initialOrderBy={this.defaultOrderBy}
+            searchBy={this.searchBy}
           />
         </CardContent>
       </Card>
