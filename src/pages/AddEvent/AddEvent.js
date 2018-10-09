@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import Paper from '@material-ui/core/es/Paper/Paper';
-import Typography from '@material-ui/core/es/Typography/Typography';
+import Paper from '@material-ui/core/Paper/Paper';
+import Typography from '@material-ui/core/Typography/Typography';
 import TextField from '@material-ui/core/TextField/TextField';
 import Grid from '@material-ui/core/Grid/Grid';
 
